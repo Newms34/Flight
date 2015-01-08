@@ -1,0 +1,231 @@
+body,html{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+body {
+    background-color:#555;
+    color:white;
+}
+#container{
+    background-color: #000;
+    border: 4px inset #555;
+    width: 1500px;
+    height: 700px;
+    border-radius:5%;
+    position:fixed;
+}
+#shipContainer{
+
+    width:75px;
+    height:75px;
+    position:absolute;
+    left:45%;
+    top:45%;
+    background-image: url('ship.png');
+    background-size: cover;
+    z-index:30;
+}
+#shipExhaust{
+    position:relative;
+    left:45.5%;
+    top:76%;
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 20px solid #ccf;
+}
+#landingPlat{
+    width:100px;
+    height:3px;
+    border: 2px solid #999;
+    background-color: #aaa;
+    top:650px;
+    left:0px;
+    position:absolute;
+    z-index:2;
+}
+#landPlatStick{
+    width: 4px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    background-color: #777;
+    z-index: 1;
+}
+
+/*Begin fuel stuff*/
+#fuelGauge{
+    border-radius: 5px;
+    height:25px;
+    width: 200px;
+    background-color:#333;
+    border: 2px inset #333;
+    position:absolute;
+    top:15px;
+    left:15px;
+    z-index:3;
+}
+#fuelBar{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #ccf;
+    height:23px;
+    position:relative;
+    top:1px;
+    width:100px;
+}
+#report{
+    position: absolute;
+    background: #ccc;
+    color: #000;
+    padding:5px;
+    right:15px;
+    top: 5px;
+    height:130px;
+    width:110px;
+    z-index:99;
+}
+
+#VSI{
+    border-radius: 50%;
+    border: 2px outset #ccc;
+    background-color: #222;
+    width:150px;
+    height:150px;
+    right:0px;
+    position:absolute;
+}
+#vsiNeedleBase{
+    width:150px;
+    height:3px;
+    top:70px;
+    position: relative;
+    z-index:1;
+}
+#vsiNeedle{
+    width:0;
+    height: 0;
+    border-bottom: 3px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 75px solid red
+}
+#VSISafety{
+    position:absolute;
+    top:-.5px;
+    border-radius: 50%;
+    clip: rect(0px, 150px, 150px, 75px);
+    background: -webkit-radial-gradient(#222,#600); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#222,#600); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#222,#600); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#222,#600); /* Standard syntax */
+    width:150px;
+    height:150px;
+    transform: rotate(70deg);
+}
+
+/*Screens for 'bad' endings: crash and escape traj
+ */
+#badEnd{
+    width: 1500px;
+    left:12px;
+    top:11px;
+    height: 700px;
+    border-radius:5%;
+    position:fixed;
+    z-index:5;
+    transition-duration:1s; 
+}
+#instruments{
+    color:#000;
+    background-color: #ccc;
+    position:absolute;
+    left:15px;
+    bottom: 15px;
+    border: 2px outset #ccc;
+    height:200px;
+    width:30%;
+}
+
+#attitude{
+    border-radius: 50%;
+    border: 2px outset #ccc;
+    background-color: #222;
+    width:150px;
+    height:150px;
+    left:0px;
+    bottom:0px;
+    position:absolute;
+}
+
+#attitudeInt{
+    width:148px;
+    height:148px;
+    border-radius: 50%;
+    position: relative;
+    z-index:1;
+    background-image: url('attBG.png');
+    background-size: contain;
+}
+
+#throttle{
+    border:2px outset #777;
+    position:absolute;
+    width:70px;
+    height:140px;
+    left:180px;
+    top: 45px;
+    background:#777;
+    
+}
+#throtTrack{
+    border: 2px inset #777;
+    position:relative;
+    left:45%;
+    top:5%;
+    width:6px;
+    height:90%;
+    background-color: #222;
+}
+#throtLev{
+    width:55px;
+    height:7px;
+    background-color: #aaa;
+    border-top: 4px outset #aaa;
+    border-bottom: 4px outset #aaa;
+    position: relative;
+    left:-25px;
+}
+#halp{
+    z-index: 109;
+    font-family: 'comic sans ms';
+    background-color:#aaa;
+    padding:15px;
+    width:30%;
+    height:50%;
+    color:#000;
+    position:fixed;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+}
+#doneHalp{
+    border-radius:5%;
+    border: 4px outset #ccc;
+    background-color: #000;
+    color:#0c0;
+    cursor: pointer;
+    padding:1px;
+    text-align: center;
+    width:50%;
+    font-family:'Lucida console';
+    font-size:x-large;
+    margin-left:auto;
+    margin-right:auto;
+}
+#doneHalp:hover{
+    text-shadow: 0 0 2px #0f0;
+    border: 2px outset #ccc;
+    color:#0f0;
+}

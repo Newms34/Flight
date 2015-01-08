@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Flight!: A Lunar Lander Game</title>
+        <link rel='stylesheet' href='flight.css'/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src='flight.js'></script>
+    </head>
+    <body>
+        <div id='container'>
+            <div id='gameField'>
+                <div id='shipContainer'>
+                    <div id ='shipExhaust'>
+                        &nbsp;
+                    </div>
+                </div>
+                <div id='landingPlat'><div id='landPlatStick'>&nbsp;</div></div>
+                <div id='report'>&nbsp;</div>
+                <div id='instruments'>
+                    <div id='VSI'>
+                        <div id='vsiNeedleBase'>
+                            <div id='vsiNeedle'>&nbsp;</div>
+                        </div>
+                        <div id='VSISafety'>&nbsp;</div>
+                    </div>
+                    <div id='fuelGauge'><div id='fuelBar'>&nbsp;FUEL</div></div>
+                    <div id='attitude'><div id='attitudeInt'></div></div>
+                    <div id='throttle'>
+                        <div id='throtTrack'>
+                            <div id='throtLev'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='badEnd'>
+            
+        </div>
+        <div id='halp'>
+            Controls:
+            <ol>
+                <li><b>Left</b> and right or <b>'a'</b> and <b>'d'</b> to rotate!</li>
+                <li><b>Up</b> or <b>'w'</b> to INCREASE thrust!</li>
+                <li><b>Down</b> or <b>'s'</b> to DECREASE thrust!</li>
+                <li>Land on the platform to win!</li>
+            </ol>
+            <hr/>
+            HINTS!
+            <ul>
+                <li>Don't land too quickly!</li>
+                <li>Small, quick movements, not large, clumsy ones!</li>
+                <li>Keep an eye on the instruments in the lower-left!</li>
+                <li>Try to beat your high score!</li>
+            </ul>
+            <div id='doneHalp' onclick='go();'>LAND!</div>
+        </div>
+    </body>
+</html>
